@@ -1,0 +1,60 @@
+
+/*imagen de fondo de contact*/
+.contact{
+    background-image: url(../imagen/pexels-bri-schneiter-346529.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: $center;
+    background-attachment: fixed;
+}
+
+//formulario
+
+.form{
+    margin-top: 120px;
+
+}
+
+// boton de news y notifications
+
+button a {
+    text-decoration: none;
+    color: $wgray;
+}
+
+
+//redes sociales 
+
+.social {
+    background-color: $wgray;
+}
+
+
+div ul li {
+    display: inline-block;
+    list-style: none;
+    margin-left: 10px;
+
+}
+
+div ul li a{
+    color: none;
+    text-decoration: none;
+
+}
+//Bucle EACH
+
+$icons:(facebook, twitter, instagram);
+
+@each $social in $icons{
+	.#{$social}{
+		background-image: url(../imagen/#{$social}.svg);
+		width: 40px;
+		height: 40px;
+        display:inline-block;
+        background-size:100%;
+        
+	}
+}
+
+

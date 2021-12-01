@@ -1,0 +1,332 @@
+/* Index -  typing FONDO ANIMACIÓN */
+
+.sectionIndex {
+    font-family: $fmont;
+    background-color: $bg-section;
+    color: $section;
+    height: $h-section;
+    width: $w-section;
+  
+  }
+  
+  .line-1{
+      position: relative;
+      top: 50%;  
+      width: 19em;
+      margin: 0 auto;
+      border-right: 2px solid rgba(255,255,255,.75);
+      font-size: 180%;
+      text-align: $center;
+      white-space: pre;
+      overflow: hidden;
+      transform: translateY(-50%);    
+  }
+  
+  /* Animation */
+  .anim-typewriter{
+    animation: typewriter 4s steps(40) 1s 1 normal both,
+               blinkTextCursor 500ms steps(40) infinite normal;
+  }
+  @keyframes typewriter{
+    from{width: 0;}
+    to{width: 19em;}
+  }
+  @keyframes blinkTextCursor{
+    from{border-right-color: rgba(255,255,255,.75);}
+    to{border-right-color: transparent;}
+  }
+
+
+  
+/*main*/
+
+.h1{
+    font-size:$f-1 * 2.5;
+    margin: 30px 0;
+}
+.principal{  
+     background-image: $gradient;
+     color: $white;
+     padding: $w-1 / 2;
+     margin-top: 70px;
+}
+
+/*ABOUT*/ /*ANIMACIÓN*/
+
+.about__value{
+    background-color: $violet;
+    width: $w-4;
+    height: $h-1 * 2.5;
+    color:$gray;
+    text-align: $center;
+    padding: $p10;
+    border-radius: 8px;
+    font-size:$s-size;
+
+}
+//extend
+.about__goal{
+    @extend .about__value;
+    background-color: #FF8516;
+}
+
+//fin extend
+
+.lang{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+}
+
+//mixing
+
+@mixin box ($call-h, $call-w){
+    height:$call-h;
+    width:$call-w;
+}
+
+.callCenterImg{
+    @include box (150px, 130px);
+}
+
+//fin mixin
+
+
+
+.languages{
+    text-align: $center;
+    font-family: $fdance;
+    font-weight: $f-w5;
+    font-size: 1.1em;
+    color: $violetblue;
+}
+
+/*imágenes services e industries*/ /*ANIMACIÓN*/
+
+.images{
+    width: $w-1;
+
+}
+
+.images:hover{
+	transform: rotateZ(360deg);
+	transition: transform 2s;
+	cursor: pointer;
+}
+
+
+p{
+    margin: 20px 0;
+}
+
+//Bucle FOR en las cards de Industries
+
+@for $i from 1 through 3{
+    .card-#{$i} {
+        border: solid rgb(136, 95, 177) 6px * $i; 
+        background-color: $white;
+    }
+}
+
+//Mapa en los articles de Services
+
+$primary: orange; //color editado
+$info:pink;       //color editado
+
+
+
+$colors:(
+    box1:$primary,
+    box2: $info,
+);
+
+@each $name, $bg-color in $colors{
+    .serv-#{$name}{
+        color: $bg-color;
+    }
+}
+
+
+/*Media Queries*/
+
+@media only screen and (min-width: 320px){
+    
+    /*Logo*/
+    .logoImg{
+        width: 12vw;
+    
+    }
+
+    .navbar{
+        padding: 0;
+    }
+    
+    /*INDEX*/
+    
+    .sectionIndex {
+        height: 10vh;
+        width: 90vw;
+    }
+    
+    .line-1{
+
+    width: 19em;
+    font-size: 85%;
+    }
+        
+    .cookies h4{
+    font-size: 0.8rem;
+    }
+    .cookies p{
+      font-size: 0.6rem;
+    }
+
+    .btn, btn-outline-success {
+      font-size: 0.4rem;
+    }
+
+
+    //h1 about y services
+
+     main h1{
+        font-size:$f-1 - 2;  /*No lo toma si pongo directamente la clase .h1*/
+    }
+
+
+    /*Footer*/
+    footer p{
+        font-size: 0.7rem;
+    }
+
+    /*Error*/
+    .error{
+
+        background-size: 80vw 100vh;
+    }
+    
+    .notfound{
+        font-size: $f-1*2;
+
+    }   
+    /*Contact*/
+    .form{
+        padding-top: 100px;
+    
+    }
+  
+}
+
+    
+@media only screen and (min-width: 480px){
+
+    /*INDEX*/
+    
+    .sectionIndex {
+        height: 15vh;
+        width: 80vw;
+    }
+
+    .line-1{
+
+          width: 19em;
+          font-size: 110%;
+      }
+
+      .cookies h4{
+          font-size: 1rem;
+      }
+      .cookies p{
+        font-size: 0.8rem;
+    }
+
+    .btn-outline-success{
+        font-size: 0.8rem;
+    }
+    
+    /*Footer*/
+    footer p{
+        font-size: 0.6rem;
+    }
+
+}
+    @media only screen and (min-width: 768px){
+        /*Logo*/
+        .logoImg{
+            width: 8vw;
+        }
+
+    
+        /*INDEX*/
+        .sectionIndex {
+            height: 20vh;
+            width: 80vw;
+        }
+    
+        .line-1{
+    
+            width: 19em;
+            font-size: 160%;
+        }
+        .cookies h4{
+            font-size: .2;
+        }
+        .cookies p{
+          font-size: 1rem;
+      }
+  
+      .btn-outline-success{
+          font-size: 1rem;
+      }
+          /*Footer*/
+        
+
+        footer p{
+            font-size: 1rem;
+        }
+    }
+
+    @media only screen and (min-width: 992px){
+ 
+        /*Logo*/
+            .logoImg{
+                width: 10vw;
+                padding-top: 10px;
+                position: absolute;
+                z-index: 2;
+                top: 0;
+            }
+            /*Navbar*/
+            .navbar{
+                height: 50px;
+                z-index: 1;
+            }
+    }
+    @media only screen and (min-width: 1020px){
+
+        /*INDEX*/
+    
+        .sectionIndex {
+            height: 30vh;
+            width: 70vw;
+          }
+        /*Contact*/
+        .form{
+            padding-top: 140px;
+
+        }
+    }
+
+
+    @media only screen and (min-width: 1200px){
+
+    
+    .h1{
+        padding-top: 40px ;
+        padding-bottom: 20px;
+    }
+    /*Contact*/
+    .form{
+        padding-top: 160px;
+    
+    }
+}  

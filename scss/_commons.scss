@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+
+//Colors
+
+$violet: rgb(66,66,84);
+$green:#5c7155;
+$gradient: linear-gradient(to bottom, #3f6983, #5c7a94, #768ba4, #909db5, #a9b0c5, #b2b6ca, #babdce, #c2c3d3, #bdbece, #b8b9c8, #b3b4c3, #aeafbe);
+$white: #fff;
+$gray: rgb(220, 220, 220);
+$violetblue: rgb(63,69,93);
+$bg-section: rgba(238, 237, 237, 0.479);
+$section: rgb(87,73,81);
+$wgray:#EBEBE8;
+$red: red;
+
+
+//Sizes
+
+$w-1: 100px;
+$w-4: 400px;
+$h-1: 100px;
+$p10: 10px;
+$f-1: 1em;
+$h-section: 60vh;
+$w-section: 70vw;
+$s-size: small;
+
+//position
+
+$center: center;
+
